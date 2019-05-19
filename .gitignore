@@ -1,2 +1,9 @@
 *.class
 *.log
+
+# misc
+.idea/*
+
+# Scala#
+target/
+project/target/*
