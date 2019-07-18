@@ -1,4 +1,4 @@
-package warmup
+package hacker_rank.warmup
 
 import scala.collection.mutable
 

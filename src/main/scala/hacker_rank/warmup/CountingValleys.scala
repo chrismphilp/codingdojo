@@ -1,4 +1,4 @@
-package warmup
+package hacker_rank.warmup
 
 object CountingValleys {
   def countingValleys(n: Int, s: String): Int = {
