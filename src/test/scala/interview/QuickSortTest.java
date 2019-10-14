@@ -20,8 +20,8 @@ public class QuickSortTest {
         quicksort.quicksortArray(testArrayOne, 0, testArrayOne.length - 1);
         assertArrayEquals(new int[]{1, 3, 5}, testArrayOne);
 
-//        int[] testArrayTwo = {1, 5, 1, 4, 5, 6, 8};
-//        quicksort.quicksortArray(testArrayTwo, 0, testArrayTwo.length - 1);
-//        assertArrayEquals(new int[]{1, 1, 4, 5, 5, 6, 8}, testArrayTwo);
+        int[] testArrayTwo = {1, 5, 1, 4, 5, 6, 8};
+        quicksort.quicksortArray(testArrayTwo, 0, testArrayTwo.length - 1);
+        assertArrayEquals(new int[]{1, 1, 4, 5, 5, 6, 8}, testArrayTwo);
     }
 }
