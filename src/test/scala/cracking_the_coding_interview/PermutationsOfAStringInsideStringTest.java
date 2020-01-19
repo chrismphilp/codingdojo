@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PermutationsOfAStringInsideStringTest {
 
-    PermutationsOfAStringInsideString permutationsOfAStringInsideString;
+    private PermutationsOfAStringInsideString permutationsOfAStringInsideString;
 
     @BeforeEach
     public void setup() {
