@@ -7,3 +7,7 @@
 # Scala#
 target/
 project/target/*
+
+# C++
+src/main/cpp/cmake-build-debug
+src/main/cpp/.idea

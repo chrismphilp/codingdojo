@@ -1,0 +1,33 @@
+package leet_code.medium;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+public class IsWordValidAfterSubstitutionsTest {
+
+    private IsWordValidAfterSubstitutions isWordValidAfterSubstitutions;
+
+    @BeforeEach
+    public void setup() {
+        isWordValidAfterSubstitutions = new IsWordValidAfterSubstitutions();
+    }
+
+    @Test
+    public void should_return_true_for_words_with_correct_substitutions() {
+        assertTrue(isWordValidAfterSubstitutions.isValid("abc"));
+        assertTrue(isWordValidAfterSubstitutions.isValid("aabcbc"));
+        assertTrue(isWordValidAfterSubstitutions.isValid("abcabc"));
+        assertTrue(isWordValidAfterSubstitutions.isValid("aabcbabcc"));
+        assertTrue(isWordValidAfterSubstitutions.isValid("abcabcababcc"));
+    }
+
+    @Test
+    public void should_return_false_for_words_with_incorrect_substitutions() {
+        assertFalse(isWordValidAfterSubstitutions.isValid(""));
+        assertFalse(isWordValidAfterSubstitutions.isValid("acb"));
+        assertFalse(isWordValidAfterSubstitutions.isValid("abcbabc"));
+    }
+}
