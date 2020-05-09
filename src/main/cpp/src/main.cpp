@@ -1,6 +1,6 @@
 #include <iostream>
-#include "ReverseOnlyLetters.h"
-#include "ElementIndexInSortedArray.h"
+#include "daily-coding-problem/reverse_only_letters/ReverseOnlyLetters.h"
+#include "daily-coding-problem/element_index_in_sorted_array/ElementIndexInSortedArray.h"
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
