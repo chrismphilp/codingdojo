@@ -28,9 +28,17 @@ if (CMAKE_VERSION VERSION_LESS 2.8.11)
     include_directories("${gtest_SOURCE_DIR}/include")
 endif ()
 
-add_executable(CodingDojoTest main.cpp)
+add_executable(CodingDojoTest
+        main.cpp
+        )
 
-target_link_libraries(CodingDojoTest gtest_main)
+target_link_libraries(CodingDojoTest
+        gtest_main
+        gmock
+        daily_coding_problem_lib
+        leetcode_lib
+        )
+
 add_test(NAME test_suite COMMAND CodingDojoTest)
 
 add_subdirectory(leetcode)

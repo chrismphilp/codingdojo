@@ -1,10 +1,9 @@
 #pragma once
 
 #include <vector>
-#include <algorithm>
-#include <iostream>
+#include <unordered_map>
 
 class TwoSum {
 public:
-    std::vector<int> twoSum(std::vector<int>& nums, int target);
+    std::vector<int> twoSum(std::vector<int> &nums, int target);
 };

@@ -1,0 +1,5 @@
+target_sources(CodingDojoTest
+        PUBLIC
+            two-sum/TwoSumTest.cpp two-sum/TwoSumTest.h
+            add-two-numbers/AddTwoNumbersTest.cpp add-two-numbers/AddTwoNumbersTest.h
+        )
