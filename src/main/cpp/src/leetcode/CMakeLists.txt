@@ -1,6 +1,7 @@
 set(LEETCODE_SOURCES
         two-sum/TwoSum.cpp two-sum/TwoSum.h
-        add-two-numbers/AddTwoNumbersTest.cpp add-two-numbers/AddTwoNumbers.h)
+        add-two-numbers/AddTwoNumbers.cpp add-two-numbers/AddTwoNumbers.h
+        )
 
 add_library(leetcode_lib STATIC
         ${LEETCODE_SOURCES}
