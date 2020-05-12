@@ -5,8 +5,13 @@
 #include <array>
 #include "AddTwoNumbers.h"
 
-class AddTwoNumbersTest {
+using testing::Test;
+
+class AddTwoNumbersTest : public Test {
     public:
+        AddTwoNumbers addTwoNumbers;
+
         ListNode* AddTwoNumbersTest::generateListUsingVector(std::vector<int> array);
+
         int AddTwoNumbersTest::getListLength(ListNode* l);
 };

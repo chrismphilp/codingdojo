@@ -1,5 +1,9 @@
 target_sources(CodingDojoTest
         PUBLIC
-            two-sum/TwoSumTest.cpp two-sum/TwoSumTest.h
-            add-two-numbers/AddTwoNumbersTest.cpp add-two-numbers/AddTwoNumbersTest.h
+            two-sum/TwoSumTest.cpp
+            two-sum/TwoSumTest.h
+            add-two-numbers/AddTwoNumbersTest.cpp
+            add-two-numbers/AddTwoNumbersTest.h
+        longest-substring-without-repeating-characters/LongestSubstringtWithoutRepeatingCharactersTest.cpp
+        longest-substring-without-repeating-characters/LongestSubstringtWithoutRepeatingCharactersTest.h
         )
