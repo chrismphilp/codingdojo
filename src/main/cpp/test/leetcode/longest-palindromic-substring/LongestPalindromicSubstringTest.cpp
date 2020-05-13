@@ -58,5 +58,9 @@ TEST_F(LongestPalindromicSubstringTest, ShouldReturncorrectPalindromicStringForV
                     "pqrjymqzyzmtlssnavzcquytcskcnjzzrytsvawkavzboncxlhqfiofuohehaygxidxsofhmhzygklliovnwqbwwiiyarxtoih"
                     "vjkdrzqsnmhdtdlpckuayhtfyirnhkrhbrwkdymjrjklonyggqnxhfvtkqxoicakzsxmgczpwhpkzcntkcwhkdkxvfnjbvjjou"
                     "mczjyvdgkfukfuldolqnauvoyhoheoqvpwoisniv";
+    auto t1 = std::chrono::high_resolution_clock::now();
     ASSERT_EQ(longestPalindromicSubstring.longestPalindrome(s), "qahaq");
+    auto t2 = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>( t2 - t1 ).count();
+    ASSERT_LT(duration, 750);
 }

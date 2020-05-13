@@ -4,28 +4,26 @@ std::string LongestPalindromicSubstring::longestPalindrome(std::string s) {
     int stringLength = s.length();
     if (stringLength <= 1) return s;
 
-    std::string palindromicSubstring = "";
-    int lengthOfLongestPalindromicSubstring = 0;
+    int currentBuffer = stringLength;
+    int startingIndex = 0;
 
-    for (unsigned int i = 0; i < stringLength; i++) {
-        for (unsigned int x = lengthOfLongestPalindromicSubstring; x <= stringLength - i; x++) {
-            std::string curr = s.substr(i, x);
-            if (isPalindrome(curr) && curr.length() > lengthOfLongestPalindromicSubstring) {
-                lengthOfLongestPalindromicSubstring = curr.length();
-                palindromicSubstring = curr;
-            }
+    while (currentBuffer != 1) {
+        while (startingIndex + currentBuffer <= stringLength) {
+            std::string curr = s.substr(startingIndex, currentBuffer);
+            if (isPalindrome(curr)) return curr;
+            startingIndex++;
         }
+        startingIndex = 0;
+        currentBuffer--;
     }
-    return palindromicSubstring;
+    return s.substr(0, 1);
 }
 
 bool LongestPalindromicSubstring::isPalindrome(std::string s) {
     int stringLength = s.length();
     if (stringLength <= 1) return true;
     for (unsigned int i = 0; i < (stringLength / 2); i++) {
-        if (s.at(i) != s.at(stringLength - 1 - i)) {
-            return false;
-        }
+        if (s.at(i) != s.at(stringLength - 1 - i)) return false;
     }
     return true;
 }
