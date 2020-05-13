@@ -102,7 +102,7 @@ ListNode* AddTwoNumbersTest::generateListUsingVector(std::vector<int> array) {
     auto curr = new ListNode();
     ListNode* initialNode = curr;
 
-    for (int i  = 0; i < array.size(); i++) {
+    for (unsigned int i  = 0; i < array.size(); i++) {
         curr->val = array[i];
 
         if (i != (array.size() - 1)) {
