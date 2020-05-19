@@ -34,4 +34,4 @@ jobs:
     - name: build
       run: cd src/main/cpp && cmake --build build --config Debug
     - name: test
-      run: cd src/main/cpp/build && ctest
+      run: cd src/main/cpp/build && ctest -C Debug
