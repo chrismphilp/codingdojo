@@ -8,4 +8,6 @@ target_sources(CodingDojoTest
             longest-substring-without-repeating-characters/LongestSubstringWithoutRepeatingCharactersTest.h
             longest-palindromic-substring/LongestPalindromicSubstringTest.cpp
             longest-palindromic-substring/LongestPalindromicSubstringTest.h
+            zig-zag-conversion/ZigZagConversionTest.cpp
+            zig-zag-conversion/ZigZagConversionTest.h
         )

@@ -18,21 +18,53 @@ public class SerializeBinaryTree {
             nodeStack.push(curr.right);
             nodeStack.push(curr.left);
         }
-        return stringBuilder.toString();
+        String serializedTree = stringBuilder.toString();
+        return serializedTree.substring(0, serializedTree.length() - 1);
     }
 
     public Node deserialize(String deserializedNode) {
+        String[] arrayOfNodes = deserializedNode.split(" ");
+        Stack<Node> nodeStack = new Stack<>();
 
-        return new Node(1, null, null);
+        Node curr = new Node(arrayOfNodes[0], null, null);
+        int count = 0;
+        boolean rightSide = false;
+
+        for (String nodeValue : arrayOfNodes) {
+
+            if (count == 0) {
+                count++;
+                continue;
+            }
+
+            if (nodeValue.equals("null") && !rightSide) {
+                rightSide = true;
+            } else if (nodeValue.equals("null") && rightSide) {
+                curr = nodeStack.pop();
+            } else if (!rightSide) {
+                Node created = new Node(nodeValue, null, null);
+                curr.left = created;
+                nodeStack.push(curr);
+                curr = created;
+            } else {
+                Node created = new Node(nodeValue, null, null);
+                curr.right = created;
+                nodeStack.push(curr);
+                curr = created;
+                rightSide = false;
+            }
+        }
+        while (!nodeStack.empty())curr = nodeStack.pop();
+        return curr;
     }
 }
 
 class Node {
-    int value;
+    String value;
     Node left;
     Node right;
 
-    public Node(int value, Node left, Node right) {
+    public Node(String value, Node left, Node right) {
         this.value = value;
         this.left = left;
         this.right = right;

@@ -10,8 +10,6 @@ using testing::Test;
 class AddTwoNumbersTest : public Test {
     public:
         AddTwoNumbers addTwoNumbers;
-
-        ListNode* AddTwoNumbersTest::generateListUsingVector(std::vector<int> array);
-
-        int AddTwoNumbersTest::getListLength(ListNode* l);
+        ListNode* generateListUsingVector(std::vector<int> array);
+        int getListLength(ListNode* l);
 };
