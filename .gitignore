@@ -5,11 +5,11 @@
 .idea/*
 
 # Scala#
-src/main/scala/.idea
-src/main/scala/project/project
-src/main/scala/project/target
-src/main/scala/target
+code/scala/.idea
+code/scala/project/project
+code/scala/project/target
+code/scala/target
 
 # C++
-src/main/cpp/cmake-build-debug
-src/main/cpp/.idea
+code/cpp/cmake-build-debug
+code/cpp/.idea
