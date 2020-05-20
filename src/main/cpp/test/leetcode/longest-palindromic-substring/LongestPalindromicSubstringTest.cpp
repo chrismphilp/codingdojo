@@ -62,5 +62,5 @@ TEST_F(LongestPalindromicSubstringTest, ShouldReturncorrectPalindromicStringForV
     ASSERT_EQ(longestPalindromicSubstring.longestPalindrome(s), "qahaq");
     auto t2 = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::milliseconds>( t2 - t1 ).count();
-    ASSERT_LT(duration, 750);
+    ASSERT_LT(duration, 2000);
 }
