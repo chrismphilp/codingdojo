@@ -14,11 +14,11 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: configure
-      run: cd src/main/cpp && mkdir build && cd build && cmake -DCMAKE_CXX_FLAGS="-Werror" ..
+      run: cd code/cpp && mkdir build && cd build && cmake -DCMAKE_CXX_FLAGS="-Werror" ..
     - name: build
-      run: cd src/main/cpp && cmake --build build
+      run: cd code/cpp && cmake --build build
     - name: test
-      run: cd src/main/cpp/build && ctest --verbose
+      run: cd code/cpp/build && ctest --verbose
 
   build-windows:
 
@@ -30,8 +30,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: configure
-      run: cd src/main/cpp && mkdir build && cd build && cmake ..
+      run: cd code/cpp && mkdir build && cd build && cmake ..
     - name: build
-      run: cd src/main/cpp && cmake --build build --config Debug
+      run: cd code/cpp && cmake --build build --config Debug
     - name: test
-      run: cd src/main/cpp/build && ctest -C Debug --verbose
+      run: cd code/cpp/build && ctest -C Debug --verbose
