@@ -1,6 +1,8 @@
 package leet_code.easy
 
-class LengthOfLastWordTest extends FunSuite {
+import org.scalatest.funsuite.AnyFunSuite
+
+class LengthOfLastWordTest extends AnyFunSuite {
   test("Correct length of the last work in the string should be returned") {
     assert(LengthOfLastWord.lengthOfLastWord("we know") == 4)
     assert(LengthOfLastWord.lengthOfLastWord("") == 0)

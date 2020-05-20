@@ -1,15 +1,15 @@
 package interview;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.*;
 
 public class FirstNonRepeatingCharacterTest {
 
     private FirstNonRepeatingCharacter firstNonRepeatingCharacter;
 
-    @BeforeEach
+    @Before
     public void setup() {
         firstNonRepeatingCharacter = new FirstNonRepeatingCharacter();
     }

@@ -1,6 +1,8 @@
 package project_euler
 
-class CollatzSequenceTest extends FunSuite {
+import org.scalatest.funsuite.AnyFunSuite
+
+class CollatzSequenceTest extends AnyFunSuite {
   test("Collatz sequence length test") {
     assert(CollatzSequence.getCollatzSequenceLength(5, 0) === 5.0)
     assert(CollatzSequence.getCollatzSequenceLength(13, 0) === 9.0)

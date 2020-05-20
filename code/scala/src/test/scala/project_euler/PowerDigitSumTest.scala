@@ -1,9 +1,11 @@
 package project_euler
 
-class PowerDigitSumTest extends FunSuite {
+import org.scalatest.funsuite.AnyFunSuite
+
+class PowerDigitSumTest extends AnyFunSuite {
   test("Power digit sum test") {
-    assert(PowerDigitSum.getPowerDigitSum(10) === 7)
-    assert(PowerDigitSum.getPowerDigitSum(15) === 26)
-    assert(PowerDigitSum.getPowerDigitSum(25) === 29)
+    assert(PowerDigitSum.getPowerDigitSum(10) === 7.0)
+    assert(PowerDigitSum.getPowerDigitSum(15) === 26.0)
+    assert(PowerDigitSum.getPowerDigitSum(25) === 29.0)
   }
 }

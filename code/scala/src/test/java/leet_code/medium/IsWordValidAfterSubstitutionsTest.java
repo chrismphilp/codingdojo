@@ -1,16 +1,15 @@
 package leet_code.medium;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.Assert.*;
 
 public class IsWordValidAfterSubstitutionsTest {
 
     private IsWordValidAfterSubstitutions isWordValidAfterSubstitutions;
 
-    @BeforeEach
+    @Before
     public void setup() {
         isWordValidAfterSubstitutions = new IsWordValidAfterSubstitutions();
     }

@@ -1,6 +1,8 @@
 package leet_code.easy
 
-class PalindromeTest extends FunSuite {
+import org.scalatest.funsuite.AnyFunSuite
+
+class PalindromeTest extends AnyFunSuite {
   test("String is palindrome") {
     assert(Palindrome.isPalindromeString("11") === true)
     assert(Palindrome.isPalindromeString("0") === true)

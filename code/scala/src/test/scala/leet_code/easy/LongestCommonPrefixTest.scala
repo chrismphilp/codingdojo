@@ -1,6 +1,8 @@
 package leet_code.easy
 
-class LongestCommonPrefixTest extends FunSuite {
+import org.scalatest.funsuite.AnyFunSuite
+
+class LongestCommonPrefixTest extends AnyFunSuite {
   test("Longest common prefix returns correct result") {
     assert(LongestCommonPrefix.longestCommonPrefix(Array("")) === "")
     assert(LongestCommonPrefix.longestCommonPrefix(Array("test", "tea")) === "te")

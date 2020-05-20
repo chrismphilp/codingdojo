@@ -1,18 +1,19 @@
 package cracking_the_coding_interview;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
+
 
 public class PrintAllPermutationsOfAStringTest {
 
     PrintAllPermutationsOfAString printAllPermutationsOfAString;
 
-    @BeforeEach
+    @Before
     public void setup() {
         printAllPermutationsOfAString = new PrintAllPermutationsOfAString();
     }

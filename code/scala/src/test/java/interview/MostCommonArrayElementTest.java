@@ -1,9 +1,9 @@
 package interview;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.Assert.*;
 
 public class MostCommonArrayElementTest {
 
@@ -20,7 +20,7 @@ public class MostCommonArrayElementTest {
         MostCommonArrayElement<Integer> mostCommonArrayElement = new MostCommonArrayElement<>();
         Integer[] intArray = {1, 2, 3, 4, 5, 5, 5, 5};
         Integer mostCommon = mostCommonArrayElement.findMostCommonArrayElement(intArray);
-        assertEquals(5, mostCommon);
+        assertEquals(5, mostCommon.intValue());
     }
 
     @Test

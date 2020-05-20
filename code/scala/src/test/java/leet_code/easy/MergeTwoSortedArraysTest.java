@@ -1,15 +1,15 @@
 package leet_code.easy;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.Assert.*;
 
 public class MergeTwoSortedArraysTest {
 
     private MergeTwoSortedArrays mergeTwoSortedArrays;
 
-    @BeforeEach
+    @Before
     public void setup() {
         mergeTwoSortedArrays = new MergeTwoSortedArrays();
     }

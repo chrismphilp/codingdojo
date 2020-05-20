@@ -1,16 +1,15 @@
 package daily_coding_problem;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.Assert.*;
 
 public class TwoNumbersFromListAddToKTest {
 
     TwoNumbersFromListAddToK twoNumbersFromListAddToK;
 
-    @BeforeEach
+    @Before
     public void setup() {
         twoNumbersFromListAddToK = new TwoNumbersFromListAddToK();
     }

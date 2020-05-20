@@ -1,6 +1,8 @@
 package leet_code.easy
 
-class JewelsAndStonesTest extends FunSuite {
+import org.scalatest.funsuite.AnyFunSuite
+
+class JewelsAndStonesTest extends AnyFunSuite {
   test("Correct number of Jewels should be returned") {
     assert(JewelsAndStones.numJewelsInStones("aB", "ABBBBa") === 5)
     assert(JewelsAndStones.numJewelsInStones("aB", "AAAAAA") === 0)

@@ -1,17 +1,17 @@
 package cracking_the_coding_interview;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 public class PermutationsOfAStringInsideStringTest {
 
     private PermutationsOfAStringInsideString permutationsOfAStringInsideString;
 
-    @BeforeEach
+    @Before
     public void setup() {
         permutationsOfAStringInsideString = new PermutationsOfAStringInsideString();
     }

@@ -1,11 +1,13 @@
 package leet_code.easy
 
+import org.scalatest.funsuite.AnyFunSuite
+
 /*
 Given the root node of a binary search tree, return the sum
 of values of all nodes with value between L and R (inclusive).
  */
 
-class RangeSumOfBSTTest extends FunSuite {
+class RangeSumOfBSTTest extends AnyFunSuite {
   test("Correct sum of BST should be returned") {
     val testTree = new TreeNode(15)
     val leftNode = new TreeNode(8)
