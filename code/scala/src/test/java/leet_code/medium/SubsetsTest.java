@@ -26,15 +26,15 @@ public class SubsetsTest {
 
     @Test
     public void should_return_correct_set_for_filled_set() {
-        List<List<Integer>> result = new ArrayList<>() {{
-            add(new ArrayList<>());
-            add(new ArrayList<>() {{
+        List<List<Integer>> result = new ArrayList<List<Integer>>() {{
+            add(new ArrayList<Integer>());
+            add(new ArrayList<Integer>() {{
                 add(1);
             }});
-            add(new ArrayList<>() {{
+            add(new ArrayList<Integer>() {{
                 add(2);
             }});
-            add(new ArrayList<>() {{
+            add(new ArrayList<Integer>() {{
                 add(1);
                 add(2);
             }});
