@@ -1,4 +1,3 @@
-#include <unordered_map>
 #include "ZigZagConversion.h"
 
 std::string ZigZagConversion::convert(std::string s, int numRows) {
