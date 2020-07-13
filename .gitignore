@@ -14,8 +14,6 @@ code/scala/target
 code/java/.idea
 code/java/.gradle
 code/java/build
-code/java/gradlew
-code/java/gradlew.bat
 
 # C++
 code/cpp/cmake-build-debug
