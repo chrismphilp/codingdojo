@@ -10,6 +10,13 @@ code/scala/project/project
 code/scala/project/target
 code/scala/target
 
+# Java#
+code/java/.idea
+code/java/.gradle
+code/java/build
+code/java/gradlew
+code/java/gradlew.bat
+
 # C++
 code/cpp/cmake-build-debug
 code/cpp/.idea
