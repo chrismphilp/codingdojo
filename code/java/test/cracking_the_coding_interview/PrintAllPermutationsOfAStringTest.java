@@ -8,7 +8,6 @@ import java.util.Set;
 
 import static org.junit.Assert.assertEquals;
 
-
 public class PrintAllPermutationsOfAStringTest {
 
     PrintAllPermutationsOfAString printAllPermutationsOfAString;

@@ -26,6 +26,5 @@ public class MatchsticksToSquareTest {
         assertTrue(matchsticksToSquare.makeSquare(new int[]{1, 1, 2, 2, 4, 4, 4, 6}));
         assertTrue(matchsticksToSquare.makeSquare(new int[]{1, 1, 1, 1}));
         assertTrue(matchsticksToSquare.makeSquare(new int[]{1, 1, 2, 4, 4, 4, 5, 6, 9}));
-//        assertTrue(matchsticksToSquare.makeSquare(new int[]{5, 5, 5, 5, 4, 4, 4, 4, 3, 3, 3, 3}));
     }
 }

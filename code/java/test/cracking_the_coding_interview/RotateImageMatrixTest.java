@@ -1,6 +1,5 @@
 package cracking_the_coding_interview;
 
-
 import org.junit.Before;
 import org.junit.Test;
 
