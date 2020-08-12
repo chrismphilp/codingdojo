@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public class DeepestLeavesSum {
-    private Map<Integer, List<Integer>> mapOfLevels = new HashMap<>();
+    private final Map<Integer, List<Integer>> mapOfLevels = new HashMap<>();
     int maxLevel = 1;
 
     public int deepestLeavesSum(TreeNode root) {
