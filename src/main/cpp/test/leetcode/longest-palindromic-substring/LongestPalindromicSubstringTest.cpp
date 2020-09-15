@@ -1,23 +1,5 @@
 #include "LongestPalindromicSubstringTest.h"
 
-TEST_F(LongestPalindromicSubstringTest, IsPalindromeShouldReturnTrueForPalindromicStrings) {
-    ASSERT_TRUE(longestPalindromicSubstring.isPalindrome("a"));
-    ASSERT_TRUE(longestPalindromicSubstring.isPalindrome("aa"));
-    ASSERT_TRUE(longestPalindromicSubstring.isPalindrome("aba"));
-    ASSERT_TRUE(longestPalindromicSubstring.isPalindrome("abcba"));
-    ASSERT_TRUE(longestPalindromicSubstring.isPalindrome("aaaaa"));
-    ASSERT_TRUE(longestPalindromicSubstring.isPalindrome("aaaaaa"));
-}
-
-TEST_F(LongestPalindromicSubstringTest, IsPalindromeShouldReturnFalseForNonPalindromicStrings) {
-    ASSERT_FALSE(longestPalindromicSubstring.isPalindrome("ab"));
-    ASSERT_FALSE(longestPalindromicSubstring.isPalindrome("abb"));
-    ASSERT_FALSE(longestPalindromicSubstring.isPalindrome("aabba"));
-    ASSERT_FALSE(longestPalindromicSubstring.isPalindrome("abab"));
-    ASSERT_FALSE(longestPalindromicSubstring.isPalindrome("aaaaaab"));
-    ASSERT_FALSE(longestPalindromicSubstring.isPalindrome("acbba"));
-}
-
 TEST_F(LongestPalindromicSubstringTest, EmptyStringShouldReturnAnEmptyString) {
     std::string s = "";
     ASSERT_EQ(longestPalindromicSubstring.longestPalindrome(s), s);
@@ -28,24 +10,27 @@ TEST_F(LongestPalindromicSubstringTest, SingleLengthStringShouldReturnASingleLen
     ASSERT_EQ(longestPalindromicSubstring.longestPalindrome(s), s);
 }
 
-TEST_F(LongestPalindromicSubstringTest, FullPalindromeStringShouldReturnSameString) {
-    std::string s = "abcba";
-    ASSERT_EQ(longestPalindromicSubstring.longestPalindrome(s), s);
-}
-
-TEST_F(LongestPalindromicSubstringTest, ShouldReturnCorrectPalindromicSubstring) {
-    std::string s = "abcdbab";
-    ASSERT_EQ(longestPalindromicSubstring.longestPalindrome(s), "bab");
-}
-
 TEST_F(LongestPalindromicSubstringTest, ShouldReturnSingleLengthString) {
     std::string s = "abcdef";
     ASSERT_EQ(longestPalindromicSubstring.longestPalindrome(s), "a");
 }
 
-TEST_F(LongestPalindromicSubstringTest, ShouldReturnCorrectPalindromicStringForLongerString) {
-    std::string s = "abcdbbfcba";
-    ASSERT_EQ(longestPalindromicSubstring.longestPalindrome(s), "bb");
+TEST_F(LongestPalindromicSubstringTest, FullPalindromeStringShouldReturnSameString) {
+    std::string s = "abcba";
+    ASSERT_EQ(longestPalindromicSubstring.longestPalindrome(s), s);
+}
+
+TEST_F(LongestPalindromicSubstringTest, ShouldReturnCorrectOddLengthPalindromicSubstring) {
+    ASSERT_EQ(longestPalindromicSubstring.longestPalindrome("wjkykqahaqwo"), "qahaq");
+    ASSERT_EQ(longestPalindromicSubstring.longestPalindrome("abcdbab"), "bab");
+    ASSERT_EQ(longestPalindromicSubstring.longestPalindrome("aacqahaqbbcse"), "qahaq");
+    ASSERT_EQ(longestPalindromicSubstring.longestPalindrome("abcdefghaaah"), "haaah");
+}
+
+TEST_F(LongestPalindromicSubstringTest, ShouldReturnCorrectEvenLengthPalindromicSubstring) {
+    ASSERT_EQ(longestPalindromicSubstring.longestPalindrome("aabbcdef"), "aa");
+    ASSERT_EQ(longestPalindromicSubstring.longestPalindrome("abcdbbfcba"), "bb");
+    ASSERT_EQ(longestPalindromicSubstring.longestPalindrome("abcddeedf"), "deed");
 }
 
 TEST_F(LongestPalindromicSubstringTest, ShouldReturncorrectPalindromicStringForVeryLongString) {

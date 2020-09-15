@@ -4,26 +4,46 @@ std::string LongestPalindromicSubstring::longestPalindrome(std::string s) {
     int stringLength = s.length();
     if (stringLength <= 1) return s;
 
-    int currentBuffer = stringLength;
-    int startingIndex = 0;
+    std::string longestPalindromicSubstring = s.substr(0, 1);
+    int longestPalindromicSubstringLength = 1;
+    int currentIndex = 1;
+    int lowerBound = 0;
+    int upperBound = 0;
 
-    while (currentBuffer != 1) {
-        while (startingIndex + currentBuffer <= stringLength) {
-            std::string curr = s.substr(startingIndex, currentBuffer);
-            if (isPalindrome(curr)) return curr;
-            startingIndex++;
+    while (currentIndex < stringLength) {
+        // Odd palindromic strings
+        lowerBound = upperBound = currentIndex;
+
+        while ((lowerBound - 1) >= 0 && (upperBound + 1) < stringLength
+               && s.at(lowerBound - 1) == s.at(upperBound + 1)) {
+            lowerBound--;
+            upperBound++;
         }
-        startingIndex = 0;
-        currentBuffer--;
-    }
-    return s.substr(0, 1);
-}
 
-bool LongestPalindromicSubstring::isPalindrome(std::string s) {
-    int stringLength = s.length();
-    if (stringLength <= 1) return true;
-    for (unsigned int i = 0; i < (stringLength / 2); i++) {
-        if (s.at(i) != s.at(stringLength - 1 - i)) return false;
+        int lengthOfPalindrome = upperBound - lowerBound + 1;
+        if (lengthOfPalindrome > longestPalindromicSubstringLength) {
+            longestPalindromicSubstring = s.substr(lowerBound, lengthOfPalindrome);
+            longestPalindromicSubstringLength = lengthOfPalindrome;
+        }
+
+        // Even palindromic strings
+        lowerBound = currentIndex - 1;
+        upperBound = currentIndex;
+
+        while (lowerBound >= 0 && upperBound < stringLength && s.at(lowerBound) == s.at(upperBound)) {
+            lowerBound--;
+            upperBound++;
+        }
+        lowerBound++;
+        upperBound--;
+
+        lengthOfPalindrome = upperBound - lowerBound + 1;
+        if (lengthOfPalindrome > longestPalindromicSubstringLength) {
+            longestPalindromicSubstring = s.substr(lowerBound, lengthOfPalindrome);
+            longestPalindromicSubstringLength = lengthOfPalindrome;
+        }
+
+        currentIndex++;
     }
-    return true;
+    return longestPalindromicSubstring;
 }
