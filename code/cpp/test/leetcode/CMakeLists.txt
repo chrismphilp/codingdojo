@@ -1,0 +1,13 @@
+target_sources(CodingDojoTest
+        PUBLIC
+            two-sum/TwoSumTest.cpp
+            two-sum/TwoSumTest.h
+            add-two-numbers/AddTwoNumbersTest.cpp
+            add-two-numbers/AddTwoNumbersTest.h
+            longest-substring-without-repeating-characters/LongestSubstringWithoutRepeatingCharactersTest.cpp
+            longest-substring-without-repeating-characters/LongestSubstringWithoutRepeatingCharactersTest.h
+            longest-palindromic-substring/LongestPalindromicSubstringTest.cpp
+            longest-palindromic-substring/LongestPalindromicSubstringTest.h
+            zig-zag-conversion/ZigZagConversionTest.cpp
+            zig-zag-conversion/ZigZagConversionTest.h
+        )
