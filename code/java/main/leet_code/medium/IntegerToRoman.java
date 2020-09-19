@@ -2,6 +2,7 @@ package leet_code.medium;
 
 import java.util.Collections;
 
+// TODO: Improve speed
 public class IntegerToRoman {
     public String intToRoman(int num) {
         StringBuilder roman = new StringBuilder();
@@ -12,15 +13,19 @@ public class IntegerToRoman {
             currentDigit = tmp % 10;
             tmp = tmp / 10;
 
-            if (currentDigit > 0 && currentDigit <= 3) {
+            if (currentDigit == 0) {
+                count++;
+                continue;
+            }
+            if (currentDigit <= 3) {
                 roman.append(String.join("", Collections.nCopies(currentDigit, getLevelBottom(count))));
             } else if (currentDigit == 4) {
                 roman.append(getLevelMiddle(count)).append(getLevelBottom(count));
             } else if (currentDigit == 5) {
                 roman.append(getLevelMiddle(count));
-            } else if (currentDigit > 5 && currentDigit <= 8) {
+            } else if (currentDigit <= 8) {
                 roman.append(String.join("", Collections.nCopies(currentDigit - 5, getLevelBottom(count)))).append(getLevelMiddle(count));
-            } else if (currentDigit == 9) {
+            } else {
                 roman.append(getLevelTop(count)).append(getLevelBottom(count));
             }
             count++;
