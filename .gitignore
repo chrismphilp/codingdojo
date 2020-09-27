@@ -5,6 +5,7 @@
 .idea/*
 
 # Scala#
+target/
 code/scala/.idea
 code/scala/project/project
 code/scala/project/target

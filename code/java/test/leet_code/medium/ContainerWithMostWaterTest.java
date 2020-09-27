@@ -22,7 +22,7 @@ public class ContainerWithMostWaterTest {
 
     @Test
     public void arrays_with_all_same_values_should_return_correct_result() {
-        int[] heights = new int[]{1,1,1,1,1};
+        int[] heights = new int[]{1, 1, 1, 1, 1};
         assertEquals(4, containerWithMostWater.maxArea(heights));
     }
 
@@ -34,7 +34,7 @@ public class ContainerWithMostWaterTest {
 
     @Test
     public void large_height_input_in_close_proximity_should_return_correct_result() {
-        int[] heights = new int[]{1,2,4,3};
+        int[] heights = new int[]{1, 2, 4, 3};
         assertEquals(4, containerWithMostWater.maxArea(heights));
     }
 }
