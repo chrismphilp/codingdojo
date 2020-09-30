@@ -33,5 +33,6 @@ public class MultiplyStringsTest {
         assertEquals("2044256", multiplyStrings.multiply("1544", "1324"));
         assertEquals("989901", multiplyStrings.multiply("9999", "99"));
         assertEquals("2364398475", multiplyStrings.multiply("4354325", "543"));
+        assertEquals("8856758498033836", multiplyStrings.multiply("2564534534", "3453554"));
     }
 }
