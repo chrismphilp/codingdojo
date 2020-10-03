@@ -16,7 +16,7 @@ public class MultiplyStringsTest {
 
     @Test
     public void zero_input_should_return_zero_output_string() {
-        assertEquals("0", multiplyStrings.multiply("0","555"));
+        assertEquals("0", multiplyStrings.multiply("0", "555"));
         assertEquals("0", multiplyStrings.multiply("555", "0"));
     }
 
