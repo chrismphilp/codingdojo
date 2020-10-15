@@ -1,10 +1,18 @@
 package leet_code.medium;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class GroupAnagrams {
     public List<List<String>> groupAnagrams(String[] strs) {
-        return new ArrayList<>();
+        Map<Integer, List<String>> store = new HashMap<>();
+
+        for (String str : strs) {
+            char[] word = str.toCharArray();
+            Arrays.sort(word);
+            int hash = Arrays.hashCode(word);
+            store.putIfAbsent(hash, new ArrayList<>());
+            store.get(hash).add(str);
+        }
+        return new ArrayList<>(store.values());
     }
 }
