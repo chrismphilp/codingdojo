@@ -3,16 +3,17 @@ package leet_code.medium;
 public class JumpGame {
     public boolean canJump(int[] nums) {
         if (nums.length <= 1) return true;
+        int currentIndex = 0;
+        int maxDistance = 0;
 
-        boolean[] passable = new boolean[nums.length];
-        passable[0] = true;
-
-        for (int i = 0; i < nums.length; i++) {
-            if (passable[nums.length - 1]) return true;
-            for (int j = i; j < nums.length && j <= i + nums[i] && passable[i]; j++) {
-                passable[j] = true;
+        while (currentIndex < nums.length && currentIndex <= maxDistance) {
+            int distance = nums[currentIndex];
+            if (maxDistance == nums.length - 1) return true;
+            if ((currentIndex + distance) > maxDistance) {
+                maxDistance = currentIndex + distance;
             }
+            currentIndex++;
         }
-        return passable[nums.length - 1];
+        return maxDistance >= nums.length - 1;
     }
 }
