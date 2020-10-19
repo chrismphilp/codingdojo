@@ -6,13 +6,13 @@ import org.junit.Test;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-public class LinkedListCycleOneTest {
+public class LinkedListCycleITest {
 
-    private LinkedListCycleOne linkedListCycle;
+    private LinkedListCycleI linkedListCycle;
 
     @Before
     public void setup() {
-        linkedListCycle = new LinkedListCycleOne();
+        linkedListCycle = new LinkedListCycleI();
     }
 
     @Test

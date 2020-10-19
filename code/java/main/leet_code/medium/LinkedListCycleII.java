@@ -1,6 +1,6 @@
 package leet_code.medium;
 
-public class LinkedListCycleTwo {
+public class LinkedListCycleII {
     public ListNode detectCycle(ListNode head) {
         if (head == null || head.next == null) return null;
         while (head.next != null) {

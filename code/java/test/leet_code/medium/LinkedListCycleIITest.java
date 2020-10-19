@@ -6,25 +6,25 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
-public class LinkedListCycleTwoTest {
+public class LinkedListCycleIITest {
 
-    private LinkedListCycleTwo linkedListCycleTwo;
+    private LinkedListCycleII linkedListCycleII;
 
     @Before
     public void setup() {
-        linkedListCycleTwo = new LinkedListCycleTwo();
+        linkedListCycleII = new LinkedListCycleII();
     }
 
     @Test
     public void empty_linked_list_should_return_null() {
         ListNode listNode = new ListNode();
-        assertNull(linkedListCycleTwo.detectCycle(listNode));
+        assertNull(linkedListCycleII.detectCycle(listNode));
     }
 
     @Test
     public void single_element_in_linked_list_should_return_null() {
         ListNode listNode = new ListNode(5);
-        assertNull(linkedListCycleTwo.detectCycle(listNode));
+        assertNull(linkedListCycleII.detectCycle(listNode));
     }
 
     @Test
@@ -33,7 +33,7 @@ public class LinkedListCycleTwoTest {
         ListNode listNodeTwo = new ListNode(2);
         listNodeOne.next = listNodeTwo;
         listNodeTwo.next = listNodeOne;
-        assertEquals(listNodeOne, linkedListCycleTwo.detectCycle(listNodeOne));
+        assertEquals(listNodeOne, linkedListCycleII.detectCycle(listNodeOne));
     }
 
     @Test
@@ -46,7 +46,7 @@ public class LinkedListCycleTwoTest {
         listNodeTwo.next = listNodeThree;
         listNodeThree.next = listNodeFour;
         listNodeFour.next = listNodeTwo;
-        assertEquals(listNodeTwo, linkedListCycleTwo.detectCycle(listNodeOne));
+        assertEquals(listNodeTwo, linkedListCycleII.detectCycle(listNodeOne));
     }
 
     @Test
@@ -55,6 +55,6 @@ public class LinkedListCycleTwoTest {
         ListNode listNodeTwo = new ListNode(2);
         listNodeOne.next = listNodeTwo;
         listNodeTwo.next = null;
-        assertNull(linkedListCycleTwo.detectCycle(listNodeOne));
+        assertNull(linkedListCycleII.detectCycle(listNodeOne));
     }
 }

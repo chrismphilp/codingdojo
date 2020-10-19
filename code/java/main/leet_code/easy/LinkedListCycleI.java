@@ -1,6 +1,6 @@
 package leet_code.easy;
 
-public class LinkedListCycleOne {
+public class LinkedListCycleI {
     public boolean hasCycle(ListNode head) {
         if (head == null || head.next == null) return false;
         while (head.next != null) {
