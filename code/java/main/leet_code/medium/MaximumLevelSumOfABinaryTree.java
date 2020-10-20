@@ -27,10 +27,22 @@ public class MaximumLevelSumOfABinaryTree {
 
             if (curr != null) {
                 foundNonNull = true;
-                fifo.add(curr.left);
-                fifo.add(curr.right);
+
+                TreeNode left = curr.left;
+                TreeNode right = curr.right;
+                int nodesAdded = 0;
+
+                if (left != null) {
+                    fifo.add(curr.left);
+                    nodesAdded++;
+                }
+                if (right != null) {
+                    fifo.add(curr.right);
+                    nodesAdded++;
+                }
                 currentTotal += curr.val;
-                levelStore.compute(currentLevel + 1, (k, v) -> (v == null) ? 2 : v + 2);
+                int finalNodesAdded = nodesAdded;
+                levelStore.compute(currentLevel + 1, (k, v) -> (v == null) ? finalNodesAdded : v + finalNodesAdded);
             }
 
             if (currentlyRead == levelStore.get(currentLevel)) {
