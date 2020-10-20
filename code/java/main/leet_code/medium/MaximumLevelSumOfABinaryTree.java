@@ -1,32 +1,32 @@
 package leet_code.medium;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.LinkedList;
 
-// TODO: Improve speed
 public class MaximumLevelSumOfABinaryTree {
-
-    Map<Integer, Integer> levelStore = new HashMap<>();
-
     public int maxLevelSum(TreeNode root) {
-        calculateLevelValues(root, 1);
+        LinkedList<TreeNode> fifo = new LinkedList<>();
+        fifo.add(root);
+
+        int level = 1;
         int maxLevel = 1;
         int valueAtMax = root.val;
 
-        for (Map.Entry<Integer, Integer> entry : levelStore.entrySet()) {
-            if (entry.getValue() > valueAtMax) {
-                maxLevel = entry.getKey();
-                valueAtMax = entry.getValue();
+        while (!fifo.isEmpty()) {
+            int levelSum = 0;
+            int fifoSize = fifo.size();
+
+            for (int i = 0; i < fifoSize; i++) {
+                TreeNode curr = fifo.pop();
+                levelSum += curr.val;
+                if (curr.left != null) fifo.add(curr.left);
+                if (curr.right != null) fifo.add(curr.right);
             }
+            if (levelSum > valueAtMax) {
+                maxLevel = level;
+                valueAtMax = levelSum;
+            }
+            level++;
         }
         return maxLevel;
-    }
-
-    private void calculateLevelValues(TreeNode node, int level) {
-        if (node != null) {
-            levelStore.compute(level, (k, v) -> (v == null) ? node.val : v + node.val);
-            calculateLevelValues(node.left, level + 1);
-            calculateLevelValues(node.right, level + 1);
-        }
     }
 }
