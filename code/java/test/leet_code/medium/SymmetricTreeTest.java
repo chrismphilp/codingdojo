@@ -42,6 +42,11 @@ public class SymmetricTreeTest {
     }
 
     @Test
+    public void should_return_true_for_null_root() {
+        assertTrue(symmetricTree.isSymmetric(null));
+    }
+
+    @Test
     public void should_return_correct_result_for_example_two() {
         TreeNode root = new TreeNode(1);
         // LHS
