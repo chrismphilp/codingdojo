@@ -7,8 +7,7 @@ public class MaximumLevelSumOfABinaryTree {
         LinkedList<TreeNode> fifo = new LinkedList<>();
         fifo.add(root);
 
-        int level = 1;
-        int maxLevel = 1;
+        int level = 1, maxLevel = 1;
         int valueAtMax = root.val;
 
         while (!fifo.isEmpty()) {
