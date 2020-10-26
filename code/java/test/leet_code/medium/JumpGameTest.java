@@ -23,7 +23,7 @@ public class JumpGameTest {
 
     @Test
     public void should_return_correct_result_for_multiple_element_array() {
-        assertTrue(jumpGame.canJump(new int[]{2,0}));
+        assertTrue(jumpGame.canJump(new int[]{2, 0}));
         assertTrue(jumpGame.canJump(new int[]{2, 3, 1, 1, 4}));
         assertTrue(jumpGame.canJump(new int[]{2, 1, 2, 0, 1}));
         assertTrue(jumpGame.canJump(new int[]{3, 0, 0, 1, 1}));

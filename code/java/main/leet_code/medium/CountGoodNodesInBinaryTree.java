@@ -1,5 +1,7 @@
 package leet_code.medium;
 
+import leet_code.TreeNode;
+
 // TODO: Write tests
 public class CountGoodNodesInBinaryTree {
     public int goodNodes(TreeNode root) {

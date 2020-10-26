@@ -1,5 +1,7 @@
 package leet_code.medium;
 
+import leet_code.TreeNode;
+
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;

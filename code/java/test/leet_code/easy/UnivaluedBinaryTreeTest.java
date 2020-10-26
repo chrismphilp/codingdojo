@@ -1,19 +1,24 @@
-package leet_code.medium;
+package leet_code.easy;
 
-import leet_code.easy.SymmetricTree;
+import leet_code.TreeNode;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-public class SymmetricTreeTest {
+public class UnivaluedBinaryTreeTest {
 
-    private SymmetricTree symmetricTree;
+    private UnivaluedBinaryTree univaluedBinaryTree;
 
     @Before
     public void setup() {
-        symmetricTree = new SymmetricTree();
+        univaluedBinaryTree = new UnivaluedBinaryTree();
+    }
+
+    @Test
+    public void should_return_true_for_null_root() {
+        assertTrue(univaluedBinaryTree.isUnivalTree(null));
     }
 
     @Test
@@ -38,12 +43,7 @@ public class SymmetricTreeTest {
         node4.left = node5;
         node4.right = node6;
 
-        assertTrue(symmetricTree.isSymmetric(root));
-    }
-
-    @Test
-    public void should_return_true_for_null_root() {
-        assertTrue(symmetricTree.isSymmetric(null));
+        assertTrue(univaluedBinaryTree.isUnivalTree(root));
     }
 
     @Test
@@ -64,7 +64,7 @@ public class SymmetricTreeTest {
         root.right = node3;
         node3.right = node4;
 
-        assertFalse(symmetricTree.isSymmetric(root));
+        assertFalse(univaluedBinaryTree.isUnivalTree(root));
     }
 
     @Test
@@ -80,7 +80,7 @@ public class SymmetricTreeTest {
         node1.left = node2;
         node1.right = node3;
 
-        assertFalse(symmetricTree.isSymmetric(root));
+        assertFalse(univaluedBinaryTree.isUnivalTree(root));
     }
 
     @Test
@@ -104,26 +104,6 @@ public class SymmetricTreeTest {
         node4.right = node5;
         node5.right = node6;
 
-        assertFalse(symmetricTree.isSymmetric(root));
-    }
-
-    @Test
-    public void should_return_correct_result_for_example_five() {
-        TreeNode root = new TreeNode(1);
-        // LHS
-        TreeNode node1 = new TreeNode(2);
-        TreeNode node2 = new TreeNode(3);
-        // RHS
-        TreeNode node4 = new TreeNode(2);
-        TreeNode node5 = new TreeNode(3);
-
-        // LHS
-        root.left = node1;
-        node1.left = node2;
-        // RHS
-        root.right = node4;
-        node4.left = node5;
-
-        assertFalse(symmetricTree.isSymmetric(root));
+        assertFalse(univaluedBinaryTree.isUnivalTree(root));
     }
 }

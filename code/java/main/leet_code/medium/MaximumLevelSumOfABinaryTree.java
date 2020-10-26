@@ -1,5 +1,7 @@
 package leet_code.medium;
 
+import leet_code.TreeNode;
+
 import java.util.LinkedList;
 
 public class MaximumLevelSumOfABinaryTree {

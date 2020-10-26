@@ -1,5 +1,7 @@
 package leet_code.medium;
 
+import leet_code.TreeNode;
+
 public class DeleteLeavesWithAGivenValue {
     public TreeNode removeLeafNodes(TreeNode root, int target) {
         if (root == null) return null;

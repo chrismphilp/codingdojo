@@ -1,6 +1,6 @@
 package leet_code.easy;
 
-import leet_code.medium.TreeNode;
+import leet_code.TreeNode;
 
 public class SymmetricTree {
     public boolean isSymmetric(TreeNode root) {
