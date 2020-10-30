@@ -2,7 +2,6 @@ package leet_code.medium;
 
 import java.util.Collections;
 
-// TODO: Improve speed
 public class IntegerToRoman {
     public String intToRoman(int num) {
         StringBuilder roman = new StringBuilder();
