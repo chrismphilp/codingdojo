@@ -23,7 +23,6 @@ public class FindElementsInAContaminatedBinaryTree {
                     val = 2 * previousValue + 2;
                     break;
             }
-            node.val = val;
             numbers.add(val);
             recoverBinaryTree(node.left, Direction.LEFT, val);
             recoverBinaryTree(node.right, Direction.RIGHT, val);
