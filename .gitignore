@@ -6,6 +6,7 @@
 
 # Scala#
 target/
+lib/
 code/scala/.idea
 code/scala/project/project
 code/scala/project/target
