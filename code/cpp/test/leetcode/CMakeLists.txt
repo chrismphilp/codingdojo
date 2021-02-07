@@ -1,13 +1,14 @@
-target_sources(CodingDojoTest
-        PUBLIC
-            two-sum/TwoSumTest.cpp
-            two-sum/TwoSumTest.h
-            add-two-numbers/AddTwoNumbersTest.cpp
-            add-two-numbers/AddTwoNumbersTest.h
-            longest-substring-without-repeating-characters/LongestSubstringWithoutRepeatingCharactersTest.cpp
-            longest-substring-without-repeating-characters/LongestSubstringWithoutRepeatingCharactersTest.h
-            longest-palindromic-substring/LongestPalindromicSubstringTest.cpp
-            longest-palindromic-substring/LongestPalindromicSubstringTest.h
-            zig-zag-conversion/ZigZagConversionTest.cpp
-            zig-zag-conversion/ZigZagConversionTest.h
+target_sources(CodingDojoTest PUBLIC
+        easy/two-sum/TwoSumTest.cpp
+        easy/two-sum/TwoSumTest.h
+        easy/add-two-numbers/AddTwoNumbersTest.cpp
+        easy/add-two-numbers/AddTwoNumbersTest.h
+        easy/longest-substring-without-repeating-characters/LongestSubstringWithoutRepeatingCharactersTest.cpp
+        easy/longest-substring-without-repeating-characters/LongestSubstringWithoutRepeatingCharactersTest.h
+        easy/longest-palindromic-substring/LongestPalindromicSubstringTest.cpp
+        easy/longest-palindromic-substring/LongestPalindromicSubstringTest.h
+        easy/zig-zag-conversion/ZigZagConversionTest.cpp
+        easy/zig-zag-conversion/ZigZagConversionTest.h
+        easy/find-numbers-with-even-number-of-digits/FindNumbersWithEvenNumberOfDigitsTest.cpp
+        easy/find-numbers-with-even-number-of-digits/FindNumbersWithEvenNumberOfDigitsTest.h
         )

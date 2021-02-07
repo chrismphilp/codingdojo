@@ -2,7 +2,7 @@ name := "CodingDojo"
 
 version := "0.1"
 
-scalaVersion := "2.12.1"
+scalaVersion := "2.13.4"
 
 libraryDependencies += "org.scalactic" %% "scalactic" % "3.1.2"
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.1.2" % "test"
