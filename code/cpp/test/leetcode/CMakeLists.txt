@@ -1,4 +1,5 @@
 target_sources(CodingDojoTest PUBLIC
+        # Easy
         easy/two-sum/TwoSumTest.cpp
         easy/two-sum/TwoSumTest.h
         easy/add-two-numbers/AddTwoNumbersTest.cpp
@@ -11,4 +12,7 @@ target_sources(CodingDojoTest PUBLIC
         easy/zig-zag-conversion/ZigZagConversionTest.h
         easy/find-numbers-with-even-number-of-digits/FindNumbersWithEvenNumberOfDigitsTest.cpp
         easy/find-numbers-with-even-number-of-digits/FindNumbersWithEvenNumberOfDigitsTest.h
+        # Medium
+        medium/minimum-number-of-steps-to-make-two-strings-anagram/MinimumNumberOfStepsToMakeTwoStringsAnagramTest.cpp
+        medium/minimum-number-of-steps-to-make-two-strings-anagram/MinimumNumberOfStepsToMakeTwoStringsAnagramTest.h
         )

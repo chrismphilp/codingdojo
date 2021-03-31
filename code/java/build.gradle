@@ -19,5 +19,14 @@ sourceSets {
 }
 
 dependencies {
+    // JUnit
     testCompile 'junit:junit:4.12'
+    implementation 'org.junit.jupiter:junit-jupiter:5.4.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.4.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.4.2'
+    // AssertJ Core
+    testImplementation 'org.assertj:assertj-core:3.19.0'
+    // Mockito
+    testCompile group: 'org.mockito', name: 'mockito-core', version: '2.+'
+    testCompile group: 'org.mockito', name: 'mockito-junit-jupiter', version: '2.+'
 }
