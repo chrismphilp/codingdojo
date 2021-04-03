@@ -2,7 +2,7 @@ package leet_code.medium;
 
 import java.util.Arrays;
 
-// TODO
+// TODO: Finish
 public class RevealCardsInIncreasingOrder {
     public int[] deckRevealedIncreasing(int[] deck) {
         Arrays.parallelSort(deck);
