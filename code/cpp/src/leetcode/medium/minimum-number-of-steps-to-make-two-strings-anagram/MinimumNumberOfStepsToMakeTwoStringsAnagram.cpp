@@ -1,26 +1,22 @@
 #include "MinimumNumberOfStepsToMakeTwoStringsAnagram.h"
 
-// TODO: Finish
+// TODO: Improve runtime
 int MinimumNumberOfStepsToMakeTwoStringsAnagram::minSteps(std::string s, std::string t) {
-    std::sort(s.begin(), s.end());
-    std::sort(t.begin(), t.end());
 
-    int count = 0, currS = 0, currT = 0;
+    int count = 0;
+    int map[26] = {0};
 
-    while (currS < s.length()) {
-        if (s[currS] != t[currT]) {
-            while (currT < t.length()) {
-                if (s[currS] == t[currT]) {
-                    count--;
-                    break;
-                }
-                currT++;
-            }
+    for (int i = 0; i < t.length(); i++) {
+        int charValue = t[i] - 97;
+        map[charValue] += 1;
+    }
+
+    for (int i = 0; i < s.length(); i++) {
+        int charValue = s[i] - 97;
+        if (map[charValue] > 0) {
+            map[charValue] -= 1;
+        } else {
             count++;
-        }
-        currS++;
-        if (currT == t.length()) {
-            currT = currS;
         }
     }
     return count;
