@@ -1,6 +1,7 @@
 package interview;
 
 public class MergeSort {
+    // TODO: Finish
     public int[] mergesort(int[] array) {
         int halfLength = array.length / 2;
         int[] left = new int[halfLength / 2];

@@ -1,6 +1,5 @@
 #include "MinimumNumberOfStepsToMakeTwoStringsAnagram.h"
 
-// TODO: Improve runtime
 int MinimumNumberOfStepsToMakeTwoStringsAnagram::minSteps(std::string s, std::string t) {
 
     int count = 0;
@@ -21,3 +20,31 @@ int MinimumNumberOfStepsToMakeTwoStringsAnagram::minSteps(std::string s, std::st
     }
     return count;
 }
+
+int MinimumNumberOfStepsToMakeTwoStringsAnagram::minStepsSpaceEfficient(std::string s, std::string t) {
+
+    int count = 0;
+    int i = 0;
+    int j = 0;
+
+    sort(s.begin(), s.end());
+    sort(t.begin(), t.end());
+
+    while (i < s.length() && j < t.length()) {
+        if (s[i] == t[j]) {
+            i++;
+            j++;
+        }
+            // s[i] is before t[j] in the alphabet
+        else if (s[i] - 97 < t[j] - 97) {
+            i++;
+            count++;
+        }
+            // s[i] is after t[j] in the alphabet
+        else {
+            j++;
+        }
+    }
+    return count + (s.length() - i);
+}
+
