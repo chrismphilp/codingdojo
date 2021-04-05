@@ -1,21 +1,21 @@
 package leet_code.medium;
 
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
 
-// TODO: Finish
 public class RevealCardsInIncreasingOrder {
     public int[] deckRevealedIncreasing(int[] deck) {
         Arrays.parallelSort(deck);
         int[] res = new int[deck.length];
-        res[res.length - 1] = deck[deck.length - 1];
+        Queue<Integer> queue = new LinkedList<>();
 
-        for (int i = deck.length - 2; i >= 1; i--) {
-            // swap the front and last element
-            int tmp = res[i];
-            res[i] = res[res.length - 1];
-            res[res.length - 1] = tmp;
-            // add next element to the front
-            res[i - 1] = deck[i - 1];
+        for (int i = 0; i < deck.length; i++) {
+            queue.add(i);
+        }
+        for (int i = 0; i < res.length; i++) {
+            res[queue.poll()] = deck[i];
+            queue.add(queue.poll());
         }
         return res;
     }
