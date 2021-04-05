@@ -2,7 +2,6 @@ package leet_code.medium;
 
 import java.util.*;
 
-// TODO: Convert to FIFO Queue
 public class LetterCombinationsOfAPhoneNumber {
 
     private final Map<Character, List<String>> phoneNumberMapping = new HashMap<Character, List<String>>() {{
