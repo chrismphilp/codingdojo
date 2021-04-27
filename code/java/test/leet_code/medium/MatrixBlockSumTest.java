@@ -1,25 +1,17 @@
 package leet_code.medium;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.junit.jupiter.MockitoExtension;
 
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
+@ExtendWith(MockitoExtension.class)
 public class MatrixBlockSumTest {
 
+    @InjectMocks
     private MatrixBlockSum matrixBlockSum;
-
-    @Before
-    public void setup() {
-        matrixBlockSum = new MatrixBlockSum();
-    }
-
-    @Test
-    public void should_return_an_empty_array_for_empty_array() {
-        int[][] result = matrixBlockSum.matrixBlockSum(new int[][]{{}}, 1);
-        assertEquals(1, result.length);
-    }
 
     @Test
     public void should_return_the_correct_array_for_example_one() {

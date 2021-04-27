@@ -18,8 +18,9 @@ public class LetterCombinationsOfAPhoneNumber {
     public List<String> letterCombinations(String digits) {
         LinkedList<String> fifo = new LinkedList<>();
 
-        if (digits.length() == 1) return phoneNumberMapping.get(digits.charAt(0));
-        else if (digits.length() > 1) {
+        if (digits.length() == 1) {
+            return phoneNumberMapping.get(digits.charAt(0));
+        } else if (digits.length() > 1) {
             fifo.add("");
 
             for (int i = 0; i < digits.length(); i++) {
