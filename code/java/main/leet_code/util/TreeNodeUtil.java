@@ -19,8 +19,8 @@ public final class TreeNodeUtil {
     private static void inOrderTraversal(List<Integer> nodes, TreeNode curr) {
         if (curr != null) {
             nodes.add(curr.val);
-            if (curr.left != null) inOrderTraversal(nodes, curr.left);
-            if (curr.right != null) inOrderTraversal(nodes, curr.right);
+            inOrderTraversal(nodes, curr.left);
+            inOrderTraversal(nodes, curr.right);
         }
     }
 }
