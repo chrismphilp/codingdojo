@@ -2,21 +2,9 @@ package leet_code.easy;
 
 public class ConvertBinaryNumberInALinkedListToInteger {
     public int getDecimalValue(ListNode head) {
-        int size = 0;
-        ListNode tmp = head;
-        while (tmp != null) {
-            size++;
-            tmp = tmp.next;
+        if (head != null) {
+            return head.val + getDecimalValue(head.next) * 2;
         }
-
-        int total = 0;
-        while (head != null) {
-            size--;
-            if (head.val == 1) {
-                total += Math.pow(2, size);
-            }
-            head = head.next;
-        }
-        return total;
+        return 0;
     }
 }

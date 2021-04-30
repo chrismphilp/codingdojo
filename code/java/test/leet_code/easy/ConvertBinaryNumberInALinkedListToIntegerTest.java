@@ -26,7 +26,29 @@ class ConvertBinaryNumberInALinkedListToIntegerTest {
 
     @Test
     public void should_return_correct_result_for_example_two() {
-        ListNode node = new ListNode();
+        ListNode node = new ListNode(0);
         assertEquals(0, convertBinaryNumberInALinkedListToInteger.getDecimalValue(node));
+    }
+
+    @Test
+    public void should_return_correct_result_for_empty_number() {
+        ListNode node = new ListNode(0);
+        ListNode node1 = new ListNode(0);
+        ListNode node2 = new ListNode(0);
+
+        node.next = node1;
+        node1.next = node2;
+        assertEquals(0, convertBinaryNumberInALinkedListToInteger.getDecimalValue(node));
+    }
+
+    @Test
+    public void should_return_correct_result_for_full_number() {
+        ListNode node = new ListNode(1);
+        ListNode node1 = new ListNode(1);
+        ListNode node2 = new ListNode(1);
+
+        node.next = node1;
+        node1.next = node2;
+        assertEquals(7, convertBinaryNumberInALinkedListToInteger.getDecimalValue(node));
     }
 }
