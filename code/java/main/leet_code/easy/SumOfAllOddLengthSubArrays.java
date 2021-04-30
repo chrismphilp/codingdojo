@@ -2,20 +2,23 @@ package leet_code.easy;
 
 public class SumOfAllOddLengthSubArrays {
     public int sumOddLengthSubArrays(int[] arr) {
+        int[] totals = new int[arr.length];
         int sum = 0;
-        int marker = 0;
-        while (marker < arr.length) {
+        totals[0] = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            totals[i] += arr[i] + totals[i - 1];
+        }
+
+        for (int i = 0; i < arr.length; i += 2) {
             int lower = 0;
-            int upper = marker;
+            int upper = i;
 
             while (upper < arr.length) {
-                for (int i = lower; i <= upper; i++) {
-                    sum += arr[i];
-                }
-                lower++;
-                upper++;
+                sum += totals[upper] - (lower - 1 >= 0 ? totals[lower - 1] : 0);
+                ++lower;
+                ++upper;
             }
-            marker += 2;
         }
         return sum;
     }

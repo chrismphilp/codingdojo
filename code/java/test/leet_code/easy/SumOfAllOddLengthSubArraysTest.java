@@ -27,4 +27,10 @@ class SumOfAllOddLengthSubArraysTest {
     public void should_return_correct_result_for_example_three() {
         assertEquals(66, sumOfAllOddLengthSubArrays.sumOddLengthSubArrays(new int[]{10, 11, 12}));
     }
+
+    @Test
+    public void should_return_correct_result_for_contigous_sequence() {
+        assertEquals(12, sumOfAllOddLengthSubArrays.sumOddLengthSubArrays(new int[]{1, 2, 3}));
+        assertEquals(57, sumOfAllOddLengthSubArrays.sumOddLengthSubArrays(new int[]{1, 2, 3, 4, 5}));
+    }
 }
