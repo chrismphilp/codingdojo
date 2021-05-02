@@ -16,8 +16,8 @@ public class SumOfAllOddLengthSubArrays {
 
             while (upper < arr.length) {
                 sum += totals[upper] - (lower - 1 >= 0 ? totals[lower - 1] : 0);
-                ++lower;
-                ++upper;
+                lower++;
+                upper++;
             }
         }
         return sum;
