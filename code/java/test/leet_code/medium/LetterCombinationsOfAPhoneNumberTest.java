@@ -1,16 +1,19 @@
 package leet_code.medium;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@ExtendWith(MockitoExtension.class)
 public class LetterCombinationsOfAPhoneNumberTest {
 
     private final Map<String, List<String>> phoneNumberMapping = new HashMap<String, List<String>>() {{
@@ -23,12 +26,9 @@ public class LetterCombinationsOfAPhoneNumberTest {
         put("8", Arrays.asList("t", "u", "v"));
         put("9", Arrays.asList("w", "x", "y", "z"));
     }};
-    private LetterCombinationsOfAPhoneNumber letterCombinationsOfAPhoneNumber;
 
-    @Before
-    public void setup() {
-        letterCombinationsOfAPhoneNumber = new LetterCombinationsOfAPhoneNumber();
-    }
+    @InjectMocks
+    private LetterCombinationsOfAPhoneNumber letterCombinationsOfAPhoneNumber;
 
     @Test
     public void should_return_an_empty_list_for_empty_input() {
@@ -53,15 +53,22 @@ public class LetterCombinationsOfAPhoneNumberTest {
     public void should_return_a_correct_list_of_valid_characters_for_multiple_identical_input() {
         assertEquals(27, letterCombinationsOfAPhoneNumber.letterCombinations("555").size());
         assertTrue(letterCombinationsOfAPhoneNumber.letterCombinations("555")
-                .containsAll(Arrays.asList("jjj", "jjk", "jjl", "jkj", "jkk", "jkl", "jlj", "jlk", "jll", "kjj",
-                        "kjk", "kjl", "kkj", "kkk", "kkl", "klj", "klk", "kll", "ljj", "ljk", "ljl", "lkj", "lkk",
-                        "lkl", "llj", "llk", "lll")));
+                .containsAll(Arrays.asList(
+                        "jjj", "jjk", "jjl", "jkj", "jkk", "jkl", "jlj", "jlk", "jll", "kjj",
+                        "kjk", "kjl", "kkj", "kkk", "kkl", "klj", "klk", "kll", "ljj", "ljk",
+                        "ljl", "lkj", "lkk", "lkl", "llj", "llk", "lll"))
+        );
     }
 
     @Test
     public void should_return_a_correct_list_of_valid_characters_for_large_input() {
         assertEquals(36, letterCombinationsOfAPhoneNumber.letterCombinations("952").size());
         assertTrue(letterCombinationsOfAPhoneNumber.letterCombinations("952")
-                .containsAll(Arrays.asList("wja", "wjb", "wjc", "wka", "wkb", "wkc", "wla", "wlb", "wlc", "xja", "xjb", "xjc", "xka", "xkb", "xkc", "xla", "xlb", "xlc", "yja", "yjb", "yjc", "yka", "ykb", "ykc", "yla", "ylb", "ylc", "zja", "zjb", "zjc", "zka", "zkb", "zkc", "zla", "zlb", "zlc")));
+                .containsAll(Arrays.asList(
+                        "wja", "wjb", "wjc", "wka", "wkb", "wkc", "wla", "wlb", "wlc", "xja", "xjb",
+                        "xjc", "xka", "xkb", "xkc", "xla", "xlb", "xlc", "yja", "yjb", "yjc", "yka",
+                        "ykb", "ykc", "yla", "ylb", "ylc", "zja", "zjb", "zjc", "zka", "zkb", "zkc",
+                        "zla", "zlb", "zlc"))
+        );
     }
 }

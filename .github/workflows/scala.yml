@@ -2,7 +2,7 @@ name: Scala CI
 
 on:
   push:
-    branches: [ master ]
+    paths: [ 'code/scala/**' ]
   pull_request:
     branches: [ master ]
 
