@@ -4,7 +4,7 @@
 # misc
 .idea/*
 
-# Scala#
+# Scala
 target/
 lib/
 code/scala/.idea
@@ -12,7 +12,7 @@ code/scala/project/project
 code/scala/project/target
 code/scala/target
 
-# Java#
+# Java
 code/java/.idea
 code/java/.gradle
 code/java/build
@@ -20,3 +20,8 @@ code/java/build
 # C++
 code/cpp/cmake-build-debug
 code/cpp/.idea
+code/cpp/.vs
+code/cpp/out
+
+# Rust
+code.rust/.idea
