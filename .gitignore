@@ -24,4 +24,4 @@ code/cpp/.vs
 code/cpp/out
 
 # Rust
-code.rust/.idea
+code/rust/.idea
