@@ -2,7 +2,10 @@ name: C/C++ CI
 
 on: 
   push:
-    paths: [ 'code/cpp/**' ]
+    paths: [
+      '.github/workflows/cpp.yaml',
+      'code/cpp/**'
+    ]
   pull_request:
     branches: [ master ]
 

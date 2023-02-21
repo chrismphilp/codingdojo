@@ -2,7 +2,10 @@ name: Rust CI
 
 on:
   push:
-    paths: [ 'code/rust/**' ]
+    paths: [
+      '.github/workflows/rust.yaml',
+      'code/rust/**'
+    ]
   pull_request:
     branches: [ master ]
 
@@ -13,8 +16,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Access Rust directory
-        run: cd code/rust
       - name: Set up Rust toolchain
         uses: actions-rs/toolchain@v1
         with:
@@ -24,3 +25,4 @@ jobs:
       - uses: actions-rs/cargo@v1
         with:
           command: test
+          args: --manifest-path code/rust/Cargo.toml
