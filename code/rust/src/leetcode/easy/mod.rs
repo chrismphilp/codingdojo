@@ -7,3 +7,4 @@ mod pascals_triangle_i;
 mod pascals_triangle_ii;
 mod matrix_diagonal_sum;
 mod maximum_population_year;
+mod k_beauty_of_a_number;
