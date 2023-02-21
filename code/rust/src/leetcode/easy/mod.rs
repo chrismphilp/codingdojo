@@ -5,3 +5,5 @@ mod convert_sorted_array_to_binary_search_tree;
 mod first_unique_character_in_a_string;
 mod pascals_triangle_i;
 mod pascals_triangle_ii;
+mod matrix_diagonal_sum;
+mod maximum_population_year;
