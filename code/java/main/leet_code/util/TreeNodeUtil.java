@@ -1,7 +1,5 @@
 package leet_code.util;
 
-import leet_code.TreeNode;
-
 import java.util.ArrayList;
 import java.util.List;
 

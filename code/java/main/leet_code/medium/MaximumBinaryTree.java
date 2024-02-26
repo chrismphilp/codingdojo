@@ -1,6 +1,6 @@
 package leet_code.medium;
 
-import leet_code.TreeNode;
+import leet_code.util.TreeNode;
 
 public class MaximumBinaryTree {
     public TreeNode constructMaximumBinaryTree(int[] nums) {

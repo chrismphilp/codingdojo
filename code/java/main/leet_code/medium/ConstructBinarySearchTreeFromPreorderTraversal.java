@@ -1,6 +1,6 @@
 package leet_code.medium;
 
-import leet_code.TreeNode;
+import leet_code.util.TreeNode;
 
 // TODO: Understand how this works
 public class ConstructBinarySearchTreeFromPreorderTraversal {
