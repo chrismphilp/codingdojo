@@ -1,20 +1,28 @@
 package leet_code.medium;
 
-import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.PriorityQueue;
+import java.util.Queue;
 
 public class SortTheMatrixDiagonally {
+
     public int[][] diagonalSort(int[][] mat) {
-        if (mat.length == 1) return mat;
-        int[] tmp = new int[mat.length * mat[0].length];
+
+        Map<Integer, Queue<Integer>> store = new HashMap<>();
 
         for (int i = 0; i < mat.length; i++) {
-            System.arraycopy(mat[i], 0, tmp, i * (mat[0].length - 1), mat[i].length);
+            for (int j = 0; j < mat[i].length; j++) {
+                Queue<Integer> queue = store.getOrDefault(i - j, new PriorityQueue<>());
+                queue.add(mat[i][j]);
+                store.put(i - j, queue);
+            }
         }
 
-        Arrays.sort(tmp);
-
         for (int i = 0; i < mat.length; i++) {
-            System.arraycopy(tmp, i * (mat[0].length - 1), mat[i], 0, mat[i].length);
+            for (int j = 0; j < mat[i].length; j++) {
+                mat[i][j] = store.get(i - j).remove();
+            }
         }
 
         return mat;
