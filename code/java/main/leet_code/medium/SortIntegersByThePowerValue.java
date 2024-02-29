@@ -1,6 +1,10 @@
 package leet_code.medium;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class SortIntegersByThePowerValue {
 
@@ -10,13 +14,13 @@ public class SortIntegersByThePowerValue {
         int diff = hi - lo;
         if (diff == 0) return lo;
 
-        List<Pair> powerValues = new ArrayList<>(diff + 1);
+        List<Pair<Integer, Integer>> powerValues = new ArrayList<>(diff + 1);
 
         for (int i = 0; i < diff + 1; i++) {
-            powerValues.add(new Pair(i + lo, powerValue(i + lo)));
+            powerValues.add(new Pair<>(i + lo, powerValue(i + lo)));
         }
 
-        powerValues.sort(Comparator.comparing(a -> a.getSecond()));
+        powerValues.sort(Comparator.comparing(Pair::getSecond));
         return powerValues.get(k - 1).getFirst();
     }
 
@@ -34,20 +38,20 @@ public class SortIntegersByThePowerValue {
     }
 }
 
-class Pair {
-    int first;
-    int second;
+class Pair<K, V> {
+    private final K first;
+    private final V second;
 
-    public Pair(int first, int second) {
+    public Pair(K first, V second) {
         this.first = first;
         this.second = second;
     }
 
-    public int getFirst() {
+    public K getFirst() {
         return first;
     }
 
-    public int getSecond() {
+    public V getSecond() {
         return second;
     }
 }

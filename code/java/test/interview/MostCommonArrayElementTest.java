@@ -26,7 +26,7 @@ public class MostCommonArrayElementTest {
     @Test
     public void object_array_should_return_most_common_element() {
         MostCommonArrayElement<Object> mostCommonArrayElement = new MostCommonArrayElement<>();
-        Object[] objectArray = {1, null, 3, null, 5, "Hi", "Hi", "Hi"};
+        Object[] objectArray = {1, null, 3, null, 5, 3, 5, "Hi", "Hi", "Hi"};
         Object mostCommon = mostCommonArrayElement.findMostCommonArrayElement(objectArray);
         assertEquals("Hi", mostCommon);
     }
