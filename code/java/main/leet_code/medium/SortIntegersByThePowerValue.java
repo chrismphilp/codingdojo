@@ -20,8 +20,8 @@ public class SortIntegersByThePowerValue {
             powerValues.add(new Pair<>(i + lo, powerValue(i + lo)));
         }
 
-        powerValues.sort(Comparator.comparing(Pair::getSecond));
-        return powerValues.get(k - 1).getFirst();
+        powerValues.sort(Comparator.comparing(Pair::getValue));
+        return powerValues.get(k - 1).getKey();
     }
 
     private int powerValue(int val) {
@@ -47,11 +47,11 @@ class Pair<K, V> {
         this.second = second;
     }
 
-    public K getFirst() {
+    public K getKey() {
         return first;
     }
 
-    public V getSecond() {
+    public V getValue() {
         return second;
     }
 }

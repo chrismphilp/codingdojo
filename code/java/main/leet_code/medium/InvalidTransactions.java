@@ -43,7 +43,7 @@ public class InvalidTransactions {
                 res.add(transaction);
             } else {
                 for (Pair<String, Integer> pair : transactionMap.get(name)) {
-                    if (!pair.getFirst().equals(city) && Math.abs(time - pair.getSecond()) <= 60) {
+                    if (!pair.getKey().equals(city) && Math.abs(time - pair.getValue()) <= 60) {
                         res.add(transaction);
                         break;
                     }
